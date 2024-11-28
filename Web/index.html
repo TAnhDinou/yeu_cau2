@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie24/7</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div>
+        <header>
+            <input type="checkbox" name="" id="chk1">
+            <div class="logo">
+                <h1>MOVIE <span style="color: #FFD700">24/7</span></h1>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm">
+            </div>
+            <ul>
+                <li><a class="active" href="#"><i class="fa fa-film" style="padding: 5px"></i>PHIM</a></li>
+                <li><a href="#"><i class="fa fa-tv" style="padding: 5px"></i>TV</a></li>
+                <li><a href="#"><i class="fa fa-play-circle" style="padding: 5px"></i>XEM</a></li>
+                <li><a href="#"><i class="fa fa-globe" style="padding: 5px"></i>CỘNG ĐỒNG</a></li>
+            </ul>
+            <div class="menu" class="checkbtn">
+                <label for="chk1">
+                    <i class="fa fa-bars"></i>
+                </label>
+            </div>
+        </header>
+    </div>
+
+    <!-- Slider -->
+
+    <div class="carousel">
+        <input type="radio" name="carousel" id="slide-btn-1" class="slide-btn" onclick="setInt();" checked />
+        <input type="radio" name="carousel" id="slide-btn-2" class="slide-btn" onclick="setInt();" />
+        <input type="radio" name="carousel" id="slide-btn-3" class="slide-btn" onclick="setInt();" />
+        <div class="slide one"></div>
+        <div class="slide two"></div>
+        <div class="slide three"></div>
+        <div class="labels">
+            <label for="slide-btn-1"></label>
+            <label for="slide-btn-2"></label>
+            <label for="slide-btn-3"></label>
+        </div>
+    </div>
+    </div>
+
+    <!-- Movie -->
+    <div class="movie-section">
+        <h2>PHIM HOT</h2>
+        <div class="movie-container">
+            <div class="movie">
+                <img src="movie.jpg" alt="Movie 1">
+                <div class="movie-info">
+                    <h3>Phim 1</h3>
+                    <p>Ngày ra mắt: 2023-07-16</p>
+                    <p>Đánh giá: 8.5/10</p>
+                </div>
+            </div>
+
+            <div class="movie">
+                <img src="movie.jpg" alt="Movie 2">
+                <div class="movie-info">
+                    <h3>Phim 2</h3>
+                    <p>Ngày ra mắt: 2023-07-16</p>
+                    <p>Đánh giá: 7.9/10</p>
+                </div>
+            </div>
+
+            <div class="movie">
+                <img src="movie.jpg" alt="Movie 3">
+                <div class="movie-info">
+                    <h3>Phim 3</h3>
+                    <p>Ngày ra mắt: 2023-07-16</p>
+                    <p>Đánh giá: 8.1/10</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="movie-section">
+        <h2>PHỔ BIẾN</h2>
+        <div class="movie-container">
+            <div class="movie">
+                <img src="movie.jpg" alt="Movie 1">
+                <div class="movie-info">
+                    <h3>Phim 1</h3>
+                    <p>Đánh giá: <span class="rating">★★★★☆</span></p>
+                    <p>Phim khá hay.</p>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="movie.jpg" alt="Movie 2">
+                <div class="movie-info">
+                    <h3>Phim 2</h3>
+                    <p>Đánh giá: <span class="rating">★★★☆☆</p>
+                    <p>Tạm được.</p>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="movie.jpg" alt="Movie 3">
+                <div class="movie-info">
+                    <h3>Phim 3</h3>
+                    <p>Đánh giá: <span class="rating">★★★★★</p>
+                    <p>Hay.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Theo dõi</h3>
+                <ul class="social-links">
+                    <li><a href="#"><img src="facebook-icon.png" alt="Facebook"> Facebook</a></li>
+                    <li><a href="#"><img src="twitter-icon.png" alt="Twitter"> Twitter</a></li>
+                    <li><a href="#"><img src="instagram-icon.png" alt="Instagram"> Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Nhận thông báo</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Nhập email" required>
+                    <button type="submit">Đăng kí</button>
+                </form>
+            </div>
+            <div class="footer-column">
+                <h3>Truy cập</h3>
+                <ul class="quick-links">
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Hiên hệ</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Điều khoản dịch vụ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Web xem phim 24/7</p>
+        </div>
+    </footer>
+    
+</body>
+
+<script type="text/javascript">
+    var int;
+    function setInt() {
+        clearInterval(int);
+        int = setInterval(function () {
+            var btns = document.getElementsByName("carousel");
+            for (var i = 0; i < btns.length; i++) {
+                if (btns[i].checked) {
+                    btns[i].checked = false;
+                    if (i + 1 == btns.length) {
+                        btns[0].checked = true;
+                    }
+                    else {
+                        btns[i + 1].checked = true;
+                    }
+                    return;
+                }
+            }
+        }, 5000);
+    }
+    setInt();
+</script>
+</html>
