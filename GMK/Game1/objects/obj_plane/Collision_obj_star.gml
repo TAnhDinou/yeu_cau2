@@ -16,8 +16,8 @@ if(!variable_instance_exists(id, "__dnd_score")) __dnd_score = 0;var tmp = __dn
 /// @DnDVersion : 1
 /// @DnDHash : 745C65F7
 /// @DnDArgument : "var" "tmp"
-/// @DnDArgument : "value" "10"
-if(tmp == 10){	/// @DnDAction : YoYo Games.Rooms.If_Last_Room
+/// @DnDArgument : "value" "3"
+if(tmp == 3){	/// @DnDAction : YoYo Games.Rooms.If_Last_Room
 	/// @DnDVersion : 1
 	/// @DnDHash : 052E34FD
 	/// @DnDParent : 745C65F7
@@ -36,7 +36,13 @@ if(tmp == 10){	/// @DnDAction : YoYo Games.Rooms.If_Last_Room
 		/// @DnDParent : 052E34FD
 		with(all) {
 		__dnd_score = real(0);
-		}}
+		}
+	
+		/// @DnDAction : YoYo Games.Audio.Stop_All_Audio
+		/// @DnDVersion : 1
+		/// @DnDHash : 10FC37A2
+		/// @DnDParent : 052E34FD
+		audio_stop_all();}
 
 	/// @DnDAction : YoYo Games.Common.Else
 	/// @DnDVersion : 1
