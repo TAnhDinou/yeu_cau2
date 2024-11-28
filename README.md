@@ -4,6 +4,3 @@ Scratch:
 https://scratch.mit.edu/projects/1101001905/
 
 https://scratch.mit.edu/projects/1095813913/
-
-Link dive video GameMaker:
-
